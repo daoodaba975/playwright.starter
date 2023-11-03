@@ -7,3 +7,8 @@ test("use toHaveTitle on playwright.dev", async ({ page }) => {
     /Fast and reliable end-to-end testing for modern web apps | Playwright/
   );
 });
+
+test("Utilisation de toHaveUrl", async ({ page }) => {
+  await page.goto("https://www.instagram.com/");
+  await expect(page).toHaveURL("https://www.instagram.com/");
+});
